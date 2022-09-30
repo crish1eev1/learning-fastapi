@@ -1,7 +1,7 @@
-# try:
-#     from tkinter import CASCADE
-# except:
-#     from _tkinter import CASCADE
+try:
+    from tkinter import CASCADE
+except:
+    pass
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql.sqltypes import TIMESTAMP
