@@ -29,9 +29,12 @@ Heroku (cloud deployment)
 
 ## Examples
 **Users:** (1) Create a user with an email and a password. (2) Find a user with a given ID, returns email, id, and 'created at' time stamp.
+
 **Authentication:** In order to have access to all API request options, a user must log in using their email and password. 
+
 **Posts:** (1) Get all posts available on the database, will return post content, title, id, and 'created at' time.(2) Get one post on the platform by giving post ID. 
 (3) Create post by providing title and content. (4) Update post by providing post ID, and then title and/or content. (5) Delete post by providing post ID.
+
 **Vote:** (1) Vote (= like) a post by providing the post ID.
 
 
