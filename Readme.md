@@ -6,6 +6,11 @@ This program example is a social media API created in Python using FastAPI follo
 ## Description
 This API has nine seperate functions under four categories: Users, Authentication, Posts, Vote.
 
+For now, the API is deployed on Heroku with documentation available on https://fastapi-chris1eev1.herokuapp.com/docs 
+However, the Heroku cloud free tier will end somewhere in November 2022 leading to the interruption of the service. 
+It would still work on a local machine as demonstrated on the video linked below. 
+Type `uvicorn app.main:app` in the command line to run the server (or `uvicorn main:app` from the app folder)
+
 
 ## Technology
 Python and its various libraries:
