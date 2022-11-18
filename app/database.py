@@ -6,9 +6,9 @@ from psycopg2.extras import RealDictCursor
 import time
 from .config import settings
 
-#SQLALCHEMY_DATABASE_URL = 'postgresql://<username>:<password>@<ip-adress/hostname>/<database_name>'
+# SQLALCHEMY_DATABASE_URL = 'postgresql://<username>:<password>@<ip-adress/hostname>/<database_name>'
 
-SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
@@ -16,23 +16,24 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
-#Function to get a session to our db
+# Function to get a session to our db
 def get_db():
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
-        
-#Connect to psycogp2 before using sqlalchemy
+
+
+# Connect to psycogp2 before using sqlalchemy
 # i = 0
 # while True:
-#     try: 
+#     try:
 #         conn = psycopg2.connect(host='localhost', database='*****', user='*****', password='*****', cursor_factory=RealDictCursor)
 #         cursor = conn.cursor()
 #         print("Database connection was successfull!")
 #         break
-#     except Exception as error: 
+#     except Exception as error:
 #         i += 1
 #         print(f"Connecting to database failed ({i})")
 #         print("Error:", error)

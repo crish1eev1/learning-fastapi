@@ -11,7 +11,7 @@ from .config import settings
 
 app = FastAPI()
 
-#middleware config
+# middleware config
 origins = []
 app.add_middleware(
     CORSMiddleware,
@@ -26,9 +26,9 @@ app.include_router(user.router)
 app.include_router(auth.router)
 app.include_router(vote.router)
 
-#Path operation (also called Root)
-@app.get("/") #decorator with ("/") as path - here it's the root path
-def root(): #we could remove the async
+# Path operation (also called Root)
+@app.get("/")  # decorator with ("/") as path - here it's the root path
+def root():  # we could remove the async
     return {"message": "Hello World"}
 
 
@@ -36,20 +36,14 @@ def root(): #we could remove the async
 # "uvicorn main:app" from the terminal to start it
 # "uvicorn main:app --reload" to reload the server each time the code changes
 
-#defining a find post function
+# defining a find post function
 # def find_post(id):
 #     for p in my_posts:
 #         if p['id'] == id:
 #             return p
 
-#defining a find index post function
+# defining a find index post function
 # def find_index_post(id):
 #     for i, p in enumerate(my_posts):
 #         if p['id'] == id:
 #             return i
-
-
-
-
-
-
